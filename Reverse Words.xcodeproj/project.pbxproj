@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E741BC6E281B178E008C2489 /* Reverse_Words_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741BC6D281B178E008C2489 /* Reverse_Words_Tests.swift */; };
+		E75ACBD828329302008A1DAE /* ReverseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75ACBD728329302008A1DAE /* ReverseManager.swift */; };
 		E76635A428296D690072D554 /* Reverse_WordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76635A328296D690072D554 /* Reverse_WordsUITests.swift */; };
-		E76635A628296D690072D554 /* Reverse_WordsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76635A528296D690072D554 /* Reverse_WordsUITestsLaunchTests.swift */; };
 		E7DE274B27E5093400F4BE6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DE274A27E5093400F4BE6E /* AppDelegate.swift */; };
 		E7DE274D27E5093400F4BE6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DE274C27E5093400F4BE6E /* SceneDelegate.swift */; };
 		E7DE274F27E5093400F4BE6E /* ReverseWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DE274E27E5093400F4BE6E /* ReverseWordsViewController.swift */; };
@@ -38,9 +38,9 @@
 /* Begin PBXFileReference section */
 		E741BC6B281B178E008C2489 /* Reverse Words Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reverse Words Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E741BC6D281B178E008C2489 /* Reverse_Words_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reverse_Words_Tests.swift; sourceTree = "<group>"; };
+		E75ACBD728329302008A1DAE /* ReverseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseManager.swift; sourceTree = "<group>"; };
 		E76635A128296D690072D554 /* Reverse WordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reverse WordsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76635A328296D690072D554 /* Reverse_WordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reverse_WordsUITests.swift; sourceTree = "<group>"; };
-		E76635A528296D690072D554 /* Reverse_WordsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reverse_WordsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E7DE274727E5093400F4BE6E /* Reverse Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reverse Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DE274A27E5093400F4BE6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7DE274C27E5093400F4BE6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,11 +84,36 @@
 			path = "Reverse Words Unit Tests";
 			sourceTree = "<group>";
 		};
+		E75ACBD5283292D9008A1DAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7DE275027E5093400F4BE6E /* Main.storyboard */,
+				E7DE275327E5093600F4BE6E /* Assets.xcassets */,
+				E7DE275527E5093600F4BE6E /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E75ACBD6283292E5008A1DAE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E7DE274E27E5093400F4BE6E /* ReverseWordsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E75ACBD92832930B008A1DAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E75ACBD728329302008A1DAE /* ReverseManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E76635A228296D690072D554 /* Reverse Words UI Tests */ = {
 			isa = PBXGroup;
 			children = (
 				E76635A328296D690072D554 /* Reverse_WordsUITests.swift */,
-				E76635A528296D690072D554 /* Reverse_WordsUITestsLaunchTests.swift */,
 			);
 			path = "Reverse Words UI Tests";
 			sourceTree = "<group>";
@@ -118,11 +143,10 @@
 			children = (
 				E7DE274A27E5093400F4BE6E /* AppDelegate.swift */,
 				E7DE274C27E5093400F4BE6E /* SceneDelegate.swift */,
-				E7DE274E27E5093400F4BE6E /* ReverseWordsViewController.swift */,
-				E7DE275027E5093400F4BE6E /* Main.storyboard */,
-				E7DE275327E5093600F4BE6E /* Assets.xcassets */,
-				E7DE275527E5093600F4BE6E /* LaunchScreen.storyboard */,
 				E7DE275827E5093600F4BE6E /* Info.plist */,
+				E75ACBD92832930B008A1DAE /* Model */,
+				E75ACBD5283292D9008A1DAE /* View */,
+				E75ACBD6283292E5008A1DAE /* Controller */,
 			);
 			path = "Reverse Words";
 			sourceTree = "<group>";
@@ -267,7 +291,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E76635A428296D690072D554 /* Reverse_WordsUITests.swift in Sources */,
-				E76635A628296D690072D554 /* Reverse_WordsUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +300,7 @@
 			files = (
 				E7DE274F27E5093400F4BE6E /* ReverseWordsViewController.swift in Sources */,
 				E7DE274B27E5093400F4BE6E /* AppDelegate.swift in Sources */,
+				E75ACBD828329302008A1DAE /* ReverseManager.swift in Sources */,
 				E7DE274D27E5093400F4BE6E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

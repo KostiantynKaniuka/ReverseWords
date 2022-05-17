@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zZj-Df-ueJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reverse Words-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ReverseWordsViewController" customModule="Reverse_Words" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" propertyAccessControl="all">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckN-FP-qHc" propertyAccessControl="all">
+                                <rect key="frame" x="104" y="150.5" width="206" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="206" id="MOa-Mt-1kX"/>
+                                    <constraint firstAttribute="height" constant="37" id="MaR-P8-ZTr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U89-tz-4rc" propertyAccessControl="all">
+                                <rect key="frame" x="26.5" y="412.5" width="361" height="125"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application will reverse your words. Please type your text below " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3v-hi-jou" propertyAccessControl="all">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="Ck7-az-0hO"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="61" id="Z8f-XI-S6X"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jzz-N5-CC0" propertyAccessControl="all">
+                                        <rect key="frame" x="0.0" y="49" width="361" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="Gtx-wv-Pi7" propertyAccessControl="all"/>
+                                            <constraint firstAttribute="height" constant="34" id="hYg-sU-3d0" propertyAccessControl="all"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvJ-kg-pWH" propertyAccessControl="all">
+                                        <rect key="frame" x="0.0" y="91" width="361" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="Vzw-Ad-vUS"/>
+                                            <constraint firstAttribute="height" constant="34" id="Xq1-8X-4Ca"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGG-Wl-cqA" propertyAccessControl="all">
+                                <rect key="frame" x="20" y="797" width="374" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="hJI-xg-91C"/>
+                                    <constraint firstAttribute="height" constant="41" id="sF4-h5-mw6"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reverse"/>
+                                <connections>
+                                    <action selector="reverseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iN7-J5-eDb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="U89-tz-4rc" secondAttribute="trailing" constant="20" id="4wi-tY-VPr" propertyAccessControl="all"/>
+                            <constraint firstItem="JGG-Wl-cqA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5r9-WB-X0V" propertyAccessControl="all"/>
+                            <constraint firstItem="U89-tz-4rc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ENd-Yv-y0E" propertyAccessControl="all"/>
+                            <constraint firstItem="ckN-FP-qHc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62.5" id="Gos-tV-8Dh" propertyAccessControl="all"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JGG-Wl-cqA" secondAttribute="bottom" constant="24" id="Vgd-eM-TLg" propertyAccessControl="all"/>
+                            <constraint firstItem="U89-tz-4rc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tQo-ua-N2k" propertyAccessControl="all"/>
+                            <constraint firstItem="U89-tz-4rc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="tfy-EK-5vO" propertyAccessControl="all"/>
+                            <constraint firstItem="ckN-FP-qHc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yjc-MV-Sg6" propertyAccessControl="all"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reverse Words" id="bgh-Ba-7l9" propertyAccessControl="all"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="dvJ-kg-pWH" id="IOI-sy-ieJ"/>
+                        <outlet property="reverseButton" destination="JGG-Wl-cqA" id="xp8-VY-Ufh"/>
+                        <outlet property="reverseTextField" destination="Jzz-N5-CC0" id="y4d-PR-GoE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="67.633928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Mn-dR-BLf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zZj-Df-ueJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SxF-zx-mXL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Frr-rG-iHv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MSH-wF-ZOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

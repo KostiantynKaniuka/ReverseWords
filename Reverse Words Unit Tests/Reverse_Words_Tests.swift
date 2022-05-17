@@ -1,45 +1,46 @@
-//
-//  Reverse_Words_Tests.swift
-//  Reverse Words Tests
-//
-//  Created by Константин Канюка on 28.04.2022.
-//
-
 import XCTest
 @testable import Reverse_Words
+
 class Reverse_Words_Tests: XCTestCase {
-    
-    var sut: ReverseWordsViewController!
+    var sut: ReverseManager!
     
     override func setUpWithError() throws {
-        sut = ReverseWordsViewController()
+        sut = ReverseManager.init(sampleString: "")
     }
     
     override func tearDownWithError() throws {
         sut = nil
     }
     
-    func testIfReverseMethodIsWorking() throws {
+    func testReverseCaseOne() throws {
         //Given
-        let exampleInput = "Test String"
-        func reverseWolrdsInSentance(sentanse: String) -> String {
-            let sample = exampleInput
-            let sampleSentence = sample
-            let allWords = sampleSentence.components(separatedBy: " ")
-            var newSentence = ""
-            for word in allWords {
-                if newSentence != "" {
-                    newSentence += " "
-                }
-                let reverseWord = String(word.reversed())
-                newSentence += reverseWord
-            }
-            return newSentence
-        }
-        //When
-        let inPut = reverseWolrdsInSentance(sentanse: exampleInput)
+        let input = "Test String"
         let expectedOutput = "tseT gnirtS"
-        // Then
-        XCTAssertEqual(inPut, expectedOutput)
+        sut.sampleString = input
+        //When
+        let reverseAction = sut.reverseString(textToReverse: input)
+        //Then
+        XCTAssertEqual(expectedOutput, reverseAction)
+    }
+    
+    func testReverseCaseTwo() throws {
+        //Given
+        let input = "Alpha Omega"
+        let expectedOutput = "ahplA agemO"
+        sut.sampleString = input
+        //When
+        let reverseAction = sut.reverseString(textToReverse: input)
+        //Then
+        XCTAssertTrue(expectedOutput == reverseAction)
+    }
+    
+    func testReverseCaseThree() throws {
+        //Given
+        let input = "Alpha Omega"
+        sut.sampleString = input
+        //When
+        let reverseAction = sut.reverseString(textToReverse: input)
+        //Then
+        XCTAssertFalse(input == reverseAction)
     }
 }

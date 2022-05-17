@@ -1,10 +1,3 @@
-//
-//  Reverse_WordsUITests.swift
-//  Reverse WordsUITests
-//
-//  Created by Константин Канюка on 09.05.2022.
-//
-
 import XCTest
 
 class Reverse_WordsUITests: XCTestCase {

@@ -31,7 +31,7 @@ class Reverse_Words_Tests: XCTestCase {
         //When
         let reverseAction = sut.reverseString(textToReverse: input)
         //Then
-        XCTAssertTrue(expectedOutput == reverseAction)
+         XCTAssertTrue(expectedOutput == reverseAction)
     }
     
     func testReverseCaseThree() throws {

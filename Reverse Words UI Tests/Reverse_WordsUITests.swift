@@ -1,12 +1,18 @@
+//
+//  Reverse_WordsUITests.swift
+//  Reverse WordsUITests
+//
+//  Created by Константин Канюка on 09.05.2022.
+//
+
 import XCTest
 
 class Reverse_WordsUITests: XCTestCase {
-
+    
     override func setUpWithError() throws {
-        continueAfterFailure = false
     }
-
-    func test_String_Input_And_Result_Check() throws {
+    
+    func test_ReverseButton_ReverseInputText() throws {
         //Given
         let app = XCUIApplication()
         app.launch()

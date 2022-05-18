@@ -1,10 +1,18 @@
+//
+//  ReverseManager.swift
+//  Reverse Words
+//
+//  Created by Константин Канюка on 16.05.2022.
+//
+
 import UIKit
 
-class ReverseManager  {
-    var sampleString: String
+final class ReverseManager {
+    private var sampleString: String
     init(sampleString: String) {
         self.sampleString = sampleString
     }
+    
     func reverseString(textToReverse: String) -> String {
         let sample = sampleString
         let sampleSentance = sample

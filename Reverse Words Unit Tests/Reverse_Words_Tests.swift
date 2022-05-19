@@ -11,9 +11,6 @@ import XCTest
 class Reverse_Words_Tests: XCTestCase {
     var sut: ReverseManager!
     
-    override func setUpWithError() throws {
-    }
-    
     override func tearDownWithError() throws {
         sut = nil
     }

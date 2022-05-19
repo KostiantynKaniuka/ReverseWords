@@ -9,9 +9,6 @@ import XCTest
 
 class Reverse_WordsUITests: XCTestCase {
     
-    override func setUpWithError() throws {
-    }
-    
     func test_ReverseButton_ReverseInputText() throws {
         //Given
         let app = XCUIApplication()

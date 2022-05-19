@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 final class ReverseWordsViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var reverseButton: UIButton!
@@ -34,30 +33,14 @@ final class ReverseWordsViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    private func reverseWolrdsInSentance(sentanse: String) -> String {
-        let sample = reverseTextField.text ?? ""
-        let sampleSentence = sample
-        let allWords = sampleSentence.components(separatedBy: " ")
-        var newSentence = ""
-        for word in allWords {
-            if newSentence != "" {
-                newSentence += " "
-            }
-            let reverseWord = String(word.reversed())
-            newSentence += reverseWord
-        }
-        return newSentence
-    }
-    
     @IBAction func reverseButtonTapped(_ sender: UIButton) {
-        let sample = reverseTextField.text ?? ""
-        let sampleSentence = sample
+        let sampletext = ReverseManager(sampleString: reverseTextField.text ?? "")
         if resultLabel.text?.count == reverseTextField.text?.count {
             self.reverseTextField.text = nil
             self.resultLabel.text = nil
             reverseButton.setTitle("Reverse", for: .normal)
         } else if resultLabel.text?.count != reverseTextField.text?.count {
-            resultLabel.text = reverseWolrdsInSentance(sentanse: sampleSentence)
+            resultLabel.text = sampletext.reverseString(textToReverse: reverseTextField.text ?? "")
             reverseButton.setTitle("Clear", for: .normal)
         }
     }

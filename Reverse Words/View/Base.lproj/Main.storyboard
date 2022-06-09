@@ -11,121 +11,149 @@
         <!--Reverse Words-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ReverseWordsViewController" customModule="Reverse_Words" customModuleProvider="target" propertyAccessControl="none" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" propertyAccessControl="none">
+                <viewController id="BYZ-38-t0r" customClass="ReverseWordsViewController" customModule="Reverse_Words" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" propertyAccessControl="all">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="pkD-zd-dB8">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcn-1o-eIx" userLabel="Midle" propertyAccessControl="all">
+                                <rect key="frame" x="0.0" y="330.5" width="414" height="289"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O20-D1-DSV" userLabel="Top">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="222.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reverse Words " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckN-FP-qHc" propertyAccessControl="none">
-                                                <rect key="frame" x="104" y="71" width="206" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcn-1o-eIx" userLabel="Midle">
-                                        <rect key="frame" x="0.0" y="275.5" width="414" height="223"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to reverse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jzz-N5-CC0" propertyAccessControl="none">
-                                                <rect key="frame" x="27" y="49" width="361" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This application will reverse your words. Please type your text below " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3v-hi-jou" propertyAccessControl="none">
-                                                <rect key="frame" x="35" y="0.0" width="361" height="41"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="t9n-nx-sSa">
-                                                <rect key="frame" x="27" y="101" width="361" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="First"/>
-                                                    <segment title="Second"/>
-                                                </segments>
-                                            </segmentedControl>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text to ignore " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0KL-gJ-hW9">
-                                                <rect key="frame" x="25" y="157" width="364" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xq1-jG-Upk">
-                                                <rect key="frame" x="25" y="157" width="363" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                <connections>
-                                                    <segue destination="sjb-bg-DER" kind="embed" id="O4N-Tt-Rhu"/>
-                                                </connections>
-                                            </containerView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9RC-sz-69y" userLabel="Bottom">
-                                        <rect key="frame" x="0.0" y="551.5" width="414" height="222.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGG-Wl-cqA" propertyAccessControl="none">
-                                                <rect key="frame" x="159" y="18" width="96" height="38"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Result"/>
-                                                <connections>
-                                                    <action selector="reverseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iN7-J5-eDb"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvJ-kg-pWH" propertyAccessControl="none">
-                                                <rect key="frame" x="20" y="98" width="374" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGG-Wl-cqA" propertyAccessControl="all">
+                                        <rect key="frame" x="159" y="199" width="96" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="qh2-pX-FQy"/>
+                                            <constraint firstAttribute="height" constant="38" id="rvj-JR-3Pz"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Result"/>
+                                        <connections>
+                                            <action selector="reverseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iN7-J5-eDb"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to reverse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jzz-N5-CC0" propertyAccessControl="all">
+                                        <rect key="frame" x="26.5" y="50" width="361" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="9HB-fr-Ksi"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="361" id="bbb-Cx-3Sn"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application will reverse your words. Please type your text below " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3v-hi-jou" propertyAccessControl="all">
+                                        <rect key="frame" x="26.5" y="2" width="361" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="4de-74-9u6"/>
+                                            <constraint firstAttribute="width" constant="361" id="9gk-Tc-kjk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="t9n-nx-sSa" propertyAccessControl="all">
+                                        <rect key="frame" x="26.5" y="101" width="361" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="361" id="LLQ-no-s3a"/>
+                                            <constraint firstAttribute="height" constant="31" id="rhp-dL-pOh"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Default"/>
+                                            <segment title="Custom"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text to ignore " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0KL-gJ-hW9" propertyAccessControl="all">
+                                        <rect key="frame" x="25" y="157" width="364" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xq1-jG-Upk" propertyAccessControl="all">
+                                        <rect key="frame" x="19.5" y="151" width="375" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="375" id="aFB-fU-Qkc"/>
+                                            <constraint firstAttribute="height" constant="40" id="rFu-YB-fHq"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="sjb-bg-DER" kind="embed" id="O4N-Tt-Rhu"/>
+                                        </connections>
+                                    </containerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvJ-kg-pWH" propertyAccessControl="all">
+                                        <rect key="frame" x="20" y="245" width="374" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="h3J-K7-iWu"/>
+                                            <constraint firstAttribute="width" constant="374" id="hPT-3s-CRd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="JGG-Wl-cqA" firstAttribute="top" secondItem="Xq1-jG-Upk" secondAttribute="bottom" constant="8" symbolic="YES" id="1dc-hQ-87X" propertyAccessControl="all"/>
+                                    <constraint firstItem="JGG-Wl-cqA" firstAttribute="centerX" secondItem="dcn-1o-eIx" secondAttribute="centerX" id="37z-lY-6OJ" propertyAccessControl="all"/>
+                                    <constraint firstAttribute="width" constant="414" id="4TS-GX-3zL" propertyAccessControl="all"/>
+                                    <constraint firstAttribute="height" constant="289" id="93u-7U-7hy" propertyAccessControl="all"/>
+                                    <constraint firstItem="dvJ-kg-pWH" firstAttribute="centerX" secondItem="dcn-1o-eIx" secondAttribute="centerX" id="BNv-fT-FcI" propertyAccessControl="all"/>
+                                    <constraint firstItem="t9n-nx-sSa" firstAttribute="centerX" secondItem="dcn-1o-eIx" secondAttribute="centerX" id="Cc4-ML-OHI" propertyAccessControl="all"/>
+                                    <constraint firstItem="f3v-hi-jou" firstAttribute="top" secondItem="dcn-1o-eIx" secondAttribute="top" constant="2" id="DGm-Wn-c3a" propertyAccessControl="all"/>
+                                    <constraint firstItem="t9n-nx-sSa" firstAttribute="top" secondItem="Jzz-N5-CC0" secondAttribute="bottom" constant="17" id="IUe-Hh-rJU" propertyAccessControl="all"/>
+                                    <constraint firstItem="Xq1-jG-Upk" firstAttribute="centerX" secondItem="dcn-1o-eIx" secondAttribute="centerX" id="RLy-r1-BgT" propertyAccessControl="all"/>
+                                    <constraint firstItem="Jzz-N5-CC0" firstAttribute="top" secondItem="f3v-hi-jou" secondAttribute="bottom" constant="7" id="adL-P2-fWg" propertyAccessControl="all"/>
+                                    <constraint firstItem="Jzz-N5-CC0" firstAttribute="centerX" secondItem="dcn-1o-eIx" secondAttribute="centerX" id="gJ1-40-6EY" propertyAccessControl="all"/>
+                                    <constraint firstItem="Xq1-jG-Upk" firstAttribute="top" secondItem="t9n-nx-sSa" secondAttribute="bottom" constant="19" id="jCV-z7-Xno" propertyAccessControl="all"/>
+                                    <constraint firstItem="f3v-hi-jou" firstAttribute="centerX" secondItem="dcn-1o-eIx" secondAttribute="centerX" id="ldc-KR-ezc" propertyAccessControl="all"/>
+                                    <constraint firstItem="dvJ-kg-pWH" firstAttribute="top" secondItem="JGG-Wl-cqA" secondAttribute="bottom" constant="8" symbolic="YES" id="znn-kG-pCH" propertyAccessControl="all"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O20-D1-DSV" userLabel="Top" propertyAccessControl="all">
+                                <rect key="frame" x="7" y="88" width="400" height="33"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckN-FP-qHc" propertyAccessControl="none">
+                                        <rect key="frame" x="97" y="-4" width="206" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="DnT-OI-Fbn"/>
+                                    <constraint firstAttribute="width" constant="400" id="dxa-uc-sJA"/>
+                                    <constraint firstItem="ckN-FP-qHc" firstAttribute="centerX" secondItem="O20-D1-DSV" secondAttribute="centerX" id="qef-es-dwu"/>
+                                    <constraint firstItem="ckN-FP-qHc" firstAttribute="top" secondItem="O20-D1-DSV" secondAttribute="top" constant="-4" id="sUn-tk-0pn"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY" propertyAccessControl="none"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY" propertyAccessControl="all"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pkD-zd-dB8" secondAttribute="bottom" id="46B-Ex-DRx"/>
-                            <constraint firstItem="pkD-zd-dB8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FXD-Gk-Jws"/>
-                            <constraint firstItem="pkD-zd-dB8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZQI-eK-kIk"/>
-                            <constraint firstItem="pkD-zd-dB8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rTN-12-2xR"/>
+                            <constraint firstItem="O20-D1-DSV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="83Z-9D-zUW" propertyAccessControl="all"/>
+                            <constraint firstItem="O20-D1-DSV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9w2-Pi-eow" propertyAccessControl="all"/>
+                            <constraint firstItem="dcn-1o-eIx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KWe-he-ef4" propertyAccessControl="all"/>
+                            <constraint firstItem="dcn-1o-eIx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Ze6-0E-bUH" propertyAccessControl="all"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Reverse Words" id="bgh-Ba-7l9" propertyAccessControl="none"/>
+                    <navigationItem key="navigationItem" title="Reverse Words" id="bgh-Ba-7l9" propertyAccessControl="all"/>
                     <connections>
                         <outlet property="resultLabel" destination="dvJ-kg-pWH" id="IOI-sy-ieJ"/>
                         <outlet property="reverseButton" destination="JGG-Wl-cqA" id="xp8-VY-Ufh"/>
                         <outlet property="reverseTextField" destination="Jzz-N5-CC0" id="y4d-PR-GoE"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" propertyAccessControl="all" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1181.1594202898552" y="20.758928571428569"/>
+            <point key="canvasLocation" x="1032" y="68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Mn-dR-BLf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zZj-Df-ueJ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zZj-Df-ueJ" propertyAccessControl="all" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SxF-zx-mXL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SxF-zx-mXL" propertyAccessControl="all">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -134,32 +162,39 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Frr-rG-iHv"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MSH-wF-ZOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MSH-wF-ZOR" userLabel="First Responder" customClass="UIResponder" propertyAccessControl="all" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="67.633928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--DefaultView -->
         <scene sceneID="u7Z-Cd-mYt">
             <objects>
-                <viewController id="sjb-bg-DER" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QdV-Wa-UbV">
-                        <rect key="frame" x="0.0" y="0.0" width="757" height="34"/>
+                <viewController id="sjb-bg-DER" userLabel="DefaultView " propertyAccessControl="all" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QdV-Wa-UbV" propertyAccessControl="all">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All except of alphabet symbols " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYr-XU-ZDW">
-                                <rect key="frame" x="0.0" y="0.0" width="363" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except alphabetic symbols  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYr-XU-ZDW" propertyAccessControl="all">
+                                <rect key="frame" x="51.5" y="3" width="272" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="I5q-H6-R2a" propertyAccessControl="all"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="257" id="bcg-AI-yKp" propertyAccessControl="all"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jYr-XU-ZDW" firstAttribute="top" secondItem="QdV-Wa-UbV" secondAttribute="top" constant="3" id="6fT-Jp-uqT" propertyAccessControl="all"/>
+                            <constraint firstItem="jYr-XU-ZDW" firstAttribute="centerX" secondItem="QdV-Wa-UbV" secondAttribute="centerX" id="xte-Wr-cpZ" propertyAccessControl="all"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hyP-bT-ISN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyP-bT-ISN" userLabel="First Responder" customClass="UIResponder" propertyAccessControl="all" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1906.521739130435" y="-26.116071428571427"/>
+            <point key="canvasLocation" x="1778" y="-25"/>
         </scene>
     </scenes>
     <resources>
@@ -168,9 +203,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

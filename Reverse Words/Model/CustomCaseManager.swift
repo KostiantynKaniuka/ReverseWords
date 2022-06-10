@@ -7,11 +7,11 @@
 
 import UIKit
 
-class CustomCaseManager {
+final class CustomCaseManager {
     func reverseWithoutFilter(FullText:String, TextToIgnore:String) -> String {
         let fullTextArray = FullText.components(separatedBy: " ")
-        let TextToIgnoreArray = TextToIgnore.components(separatedBy: " ")
-        let result = fullTextArray.map{!TextToIgnoreArray.contains($0) ? String($0.reversed()) : $0}
+        let textToIgnoreArray = TextToIgnore.components(separatedBy: " ")
+        let result = fullTextArray.map{!textToIgnoreArray.contains($0) ? String($0.reversed()) : $0}
         return result.joined(separator: " ")
     }
 }

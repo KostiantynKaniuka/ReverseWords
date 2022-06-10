@@ -9,8 +9,10 @@ import UIKit
 
 final class DefaultCaseManager {
     func reverseString(textToReverse: String) -> String {
-        let components = textToReverse.components(separatedBy: " ")
-        let reversedComponents = components.map{Int($0) != nil ? String($0.reversed()) : $0}
-        return reversedComponents.joined(separator: " ")
+        let fullTextArray = textToReverse.components(separatedBy: " ")
+        let textToIgnore = textToReverse.trimmingCharacters(in: CharacterSet(charactersIn: "1234567890.!@#$%^&*()_+№:;[]-=<>,/"))
+        let filter = textToIgnore.components(separatedBy: " ")
+        let result = fullTextArray.map{filter.contains($0) ? String($0.reversed()) : $0}
+        return result.joined(separator: " ")
     }
 }

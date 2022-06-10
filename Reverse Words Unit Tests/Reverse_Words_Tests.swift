@@ -15,22 +15,22 @@ class Reverse_Words_Tests: XCTestCase {
         sut = nil
     }
     
-    func testIfReverseOfInput_IsMatchWith_ExpectedOutput() throws {
+    func testIf_InDefaultCaseTheNubers_Are_Ignored() throws {
         //Given
-        let input = "Test String"
-        sut = DefaultCaseManager(sampleString: input)
-        let expectedOutput = "tseT gnirtS"
+        sut = DefaultCaseManager()
+        let input = "Foxminded cool 24/7"
+        let expectedOutput = "dednimxoF looc 24/7"
         //When
-        let reverseAction = sut.reverseString(textToReverse:input)
+        let reverseAction = sut.reverseString(textToReverse: input)
         //Then
         XCTAssertEqual(expectedOutput, reverseAction)
     }
     
-    func testIfReverseMethodIsWorking_WithMixSymbols() throws {
+    func testIfReverseMethodIsWorking() throws {
         //Given
-        let input = "MoSqU1Tooo0"
-        let expectedOutput = "0oooT1UqSoM"
-        sut = DefaultCaseManager(sampleString: input)
+        sut = DefaultCaseManager()
+        let input = "abcd efgh"
+        let expectedOutput = "dcba hgfe"
         //When
         let reverseAction = sut.reverseString(textToReverse: input)
         //Then
@@ -39,9 +39,9 @@ class Reverse_Words_Tests: XCTestCase {
     
     func testIfNumbersAreReversed() throws {
         //Given
-        let input = "4201620"
-        let expectedOutput = "0261024"
-        sut = DefaultCaseManager(sampleString: input)
+        sut = DefaultCaseManager()
+        let input = "a1bcd efg!h"
+        let expectedOutput = "d1cba hgf!e"
         //When
         let reverseAction = sut.reverseString(textToReverse: input)
         //Then

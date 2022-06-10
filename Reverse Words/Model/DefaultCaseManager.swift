@@ -8,11 +8,23 @@
 import UIKit
 
 final class DefaultCaseManager {
-    func reverseString(textToReverse: String) -> String {
-        let fullTextArray = textToReverse.components(separatedBy: " ")
-        let textToIgnore = textToReverse.trimmingCharacters(in: CharacterSet(charactersIn: "1234567890.!@#$%^&*()_+№:;[]-=<>,/"))
-        let filter = textToIgnore.components(separatedBy: " ")
-        let result = fullTextArray.map{filter.contains($0) ? String($0.reversed()) : $0}
-        return result.joined(separator: " ")
+    private func reverseOnlyLetters_SeparateString(stringElement: String) -> String {
+        var result = Array(stringElement)
+        var i: Int = 0, j: Int = result.count - 1
+          while i < j {
+              while i < j { if result[i].isLetter { break }; i += 1 }
+              while i < j { if result[j].isLetter { break }; j -= 1 }
+              let swap = result[i]; result[i] = result[j]; result[j] = swap
+              i += 1; j -= 1
+          }
+          return String(result)
+      }
+    
+    func reververseText(Fulltext: String) -> String {
+        let sampleText = Fulltext
+        let sampleArray = sampleText.components(separatedBy: " ")
+        let reversedArray = sampleArray.map{reverseOnlyLetters_SeparateString(stringElement: $0)}
+        return reversedArray.joined(separator: " ")
     }
-}
+    }
+

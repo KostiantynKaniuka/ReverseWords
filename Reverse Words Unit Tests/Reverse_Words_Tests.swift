@@ -21,7 +21,7 @@ class Reverse_Words_Tests: XCTestCase {
         let input = "Foxminded cool 24/7"
         let expectedOutput = "dednimxoF looc 24/7"
         //When
-        let reverseAction = sut.reverseString(textToReverse: input)
+        let reverseAction = sut.reververseText(Fulltext: input)
         //Then
         XCTAssertEqual(expectedOutput, reverseAction)
     }
@@ -32,7 +32,7 @@ class Reverse_Words_Tests: XCTestCase {
         let input = "abcd efgh"
         let expectedOutput = "dcba hgfe"
         //When
-        let reverseAction = sut.reverseString(textToReverse: input)
+        let reverseAction = sut.reververseText(Fulltext: input)
         //Then
         XCTAssertEqual(expectedOutput, reverseAction)
     }
@@ -43,7 +43,7 @@ class Reverse_Words_Tests: XCTestCase {
         let input = "a1bcd efg!h"
         let expectedOutput = "d1cba hgf!e"
         //When
-        let reverseAction = sut.reverseString(textToReverse: input)
+        let reverseAction = sut.reververseText(Fulltext: input)
         //Then
         XCTAssertEqual(expectedOutput, reverseAction)
     }

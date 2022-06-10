@@ -9,7 +9,7 @@ import XCTest
 @testable import Reverse_Words
 
 class Reverse_Words_Tests: XCTestCase {
-    var sut: ReverseManager!
+    var sut: DefaultCaseManager!
     
     override func tearDownWithError() throws {
         sut = nil
@@ -18,7 +18,7 @@ class Reverse_Words_Tests: XCTestCase {
     func testIfReverseOfInput_IsMatchWith_ExpectedOutput() throws {
         //Given
         let input = "Test String"
-        sut = ReverseManager(sampleString: input)
+        sut = DefaultCaseManager(sampleString: input)
         let expectedOutput = "tseT gnirtS"
         //When
         let reverseAction = sut.reverseString(textToReverse:input)
@@ -30,7 +30,7 @@ class Reverse_Words_Tests: XCTestCase {
         //Given
         let input = "MoSqU1Tooo0"
         let expectedOutput = "0oooT1UqSoM"
-        sut = ReverseManager(sampleString: input)
+        sut = DefaultCaseManager(sampleString: input)
         //When
         let reverseAction = sut.reverseString(textToReverse: input)
         //Then
@@ -41,7 +41,7 @@ class Reverse_Words_Tests: XCTestCase {
         //Given
         let input = "4201620"
         let expectedOutput = "0261024"
-        sut = ReverseManager(sampleString: input)
+        sut = DefaultCaseManager(sampleString: input)
         //When
         let reverseAction = sut.reverseString(textToReverse: input)
         //Then

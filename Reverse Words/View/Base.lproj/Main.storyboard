@@ -28,7 +28,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Result"/>
                                         <connections>
-                                            <action selector="reverseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iN7-J5-eDb"/>
+                                            <action selector="resultButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVA-fr-0yx"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to reverse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jzz-N5-CC0" propertyAccessControl="all">
@@ -61,24 +61,20 @@
                                             <segment title="Default"/>
                                             <segment title="Custom"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="switchCase:" destination="BYZ-38-t0r" eventType="valueChanged" id="ER2-cs-jLN"/>
+                                        </connections>
                                     </segmentedControl>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text to ignore " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0KL-gJ-hW9" propertyAccessControl="all">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to ignore " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0KL-gJ-hW9" propertyAccessControl="all">
                                         <rect key="frame" x="25" y="157" width="364" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="364" id="ieX-9f-0f5" propertyAccessControl="all"/>
+                                            <constraint firstAttribute="height" constant="34" id="uhi-ys-GIF" propertyAccessControl="all"/>
+                                        </constraints>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xq1-jG-Upk" propertyAccessControl="all">
-                                        <rect key="frame" x="19.5" y="151" width="375" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="375" id="aFB-fU-Qkc"/>
-                                            <constraint firstAttribute="height" constant="40" id="rFu-YB-fHq"/>
-                                        </constraints>
-                                        <connections>
-                                            <segue destination="sjb-bg-DER" kind="embed" id="O4N-Tt-Rhu"/>
-                                        </connections>
-                                    </containerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvJ-kg-pWH" propertyAccessControl="all">
                                         <rect key="frame" x="20" y="245" width="374" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,6 +86,16 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xq1-jG-Upk" propertyAccessControl="all">
+                                        <rect key="frame" x="19.5" y="151" width="375" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="375" id="aFB-fU-Qkc"/>
+                                            <constraint firstAttribute="height" constant="40" id="rFu-YB-fHq"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="sjb-bg-DER" kind="embed" id="O4N-Tt-Rhu"/>
+                                        </connections>
+                                    </containerView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -101,7 +107,9 @@
                                     <constraint firstItem="t9n-nx-sSa" firstAttribute="centerX" secondItem="dcn-1o-eIx" secondAttribute="centerX" id="Cc4-ML-OHI" propertyAccessControl="all"/>
                                     <constraint firstItem="f3v-hi-jou" firstAttribute="top" secondItem="dcn-1o-eIx" secondAttribute="top" constant="2" id="DGm-Wn-c3a" propertyAccessControl="all"/>
                                     <constraint firstItem="t9n-nx-sSa" firstAttribute="top" secondItem="Jzz-N5-CC0" secondAttribute="bottom" constant="17" id="IUe-Hh-rJU" propertyAccessControl="all"/>
+                                    <constraint firstItem="0KL-gJ-hW9" firstAttribute="centerX" secondItem="dcn-1o-eIx" secondAttribute="centerX" id="RJF-HI-xgv" propertyAccessControl="all"/>
                                     <constraint firstItem="Xq1-jG-Upk" firstAttribute="centerX" secondItem="dcn-1o-eIx" secondAttribute="centerX" id="RLy-r1-BgT" propertyAccessControl="all"/>
+                                    <constraint firstItem="0KL-gJ-hW9" firstAttribute="top" secondItem="t9n-nx-sSa" secondAttribute="bottom" constant="25" id="WM4-cs-kCl" propertyAccessControl="all"/>
                                     <constraint firstItem="Jzz-N5-CC0" firstAttribute="top" secondItem="f3v-hi-jou" secondAttribute="bottom" constant="7" id="adL-P2-fWg" propertyAccessControl="all"/>
                                     <constraint firstItem="Jzz-N5-CC0" firstAttribute="centerX" secondItem="dcn-1o-eIx" secondAttribute="centerX" id="gJ1-40-6EY" propertyAccessControl="all"/>
                                     <constraint firstItem="Xq1-jG-Upk" firstAttribute="top" secondItem="t9n-nx-sSa" secondAttribute="bottom" constant="19" id="jCV-z7-Xno" propertyAccessControl="all"/>
@@ -139,14 +147,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Reverse Words" id="bgh-Ba-7l9" propertyAccessControl="all"/>
                     <connections>
+                        <outlet property="defaultView" destination="Xq1-jG-Upk" id="Le9-td-Fu7"/>
+                        <outlet property="ignoreTextField" destination="0KL-gJ-hW9" id="qbu-0K-U8T"/>
+                        <outlet property="midleView" destination="dcn-1o-eIx" id="ltf-cu-sY0"/>
+                        <outlet property="resultButton" destination="JGG-Wl-cqA" id="xp8-VY-Ufh"/>
                         <outlet property="resultLabel" destination="dvJ-kg-pWH" id="IOI-sy-ieJ"/>
-                        <outlet property="reverseButton" destination="JGG-Wl-cqA" id="xp8-VY-Ufh"/>
                         <outlet property="reverseTextField" destination="Jzz-N5-CC0" id="y4d-PR-GoE"/>
+                        <outlet property="switchControl" destination="t9n-nx-sSa" id="vtY-ct-u8Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" propertyAccessControl="all" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1032" y="68"/>
+            <point key="canvasLocation" x="1031.8840579710145" y="67.633928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Mn-dR-BLf">
@@ -185,6 +197,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Qb-rc-6j2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jYr-XU-ZDW" firstAttribute="top" secondItem="QdV-Wa-UbV" secondAttribute="top" constant="3" id="6fT-Jp-uqT" propertyAccessControl="all"/>

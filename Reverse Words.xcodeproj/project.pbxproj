@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E741BC6E281B178E008C2489 /* Reverse_Words_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741BC6D281B178E008C2489 /* Reverse_Words_Tests.swift */; };
-		E75ACBD828329302008A1DAE /* ReverseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75ACBD728329302008A1DAE /* ReverseManager.swift */; };
+		E75ACBD828329302008A1DAE /* DefaultCaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75ACBD728329302008A1DAE /* DefaultCaseManager.swift */; };
 		E76635A428296D690072D554 /* Reverse_WordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76635A328296D690072D554 /* Reverse_WordsUITests.swift */; };
+		E7BBADB728537A2B00A0D917 /* CustomCaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BBADB628537A2B00A0D917 /* CustomCaseManager.swift */; };
 		E7DE274B27E5093400F4BE6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DE274A27E5093400F4BE6E /* AppDelegate.swift */; };
 		E7DE274D27E5093400F4BE6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DE274C27E5093400F4BE6E /* SceneDelegate.swift */; };
 		E7DE274F27E5093400F4BE6E /* ReverseWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DE274E27E5093400F4BE6E /* ReverseWordsViewController.swift */; };
@@ -38,9 +39,10 @@
 /* Begin PBXFileReference section */
 		E741BC6B281B178E008C2489 /* Reverse Words Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reverse Words Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E741BC6D281B178E008C2489 /* Reverse_Words_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reverse_Words_Tests.swift; sourceTree = "<group>"; };
-		E75ACBD728329302008A1DAE /* ReverseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseManager.swift; sourceTree = "<group>"; };
+		E75ACBD728329302008A1DAE /* DefaultCaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCaseManager.swift; sourceTree = "<group>"; };
 		E76635A128296D690072D554 /* Reverse WordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reverse WordsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76635A328296D690072D554 /* Reverse_WordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reverse_WordsUITests.swift; sourceTree = "<group>"; };
+		E7BBADB628537A2B00A0D917 /* CustomCaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCaseManager.swift; sourceTree = "<group>"; };
 		E7DE274727E5093400F4BE6E /* Reverse Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reverse Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DE274A27E5093400F4BE6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7DE274C27E5093400F4BE6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,7 +107,8 @@
 		E75ACBD92832930B008A1DAE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E75ACBD728329302008A1DAE /* ReverseManager.swift */,
+				E75ACBD728329302008A1DAE /* DefaultCaseManager.swift */,
+				E7BBADB628537A2B00A0D917 /* CustomCaseManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,8 +303,9 @@
 			files = (
 				E7DE274F27E5093400F4BE6E /* ReverseWordsViewController.swift in Sources */,
 				E7DE274B27E5093400F4BE6E /* AppDelegate.swift in Sources */,
-				E75ACBD828329302008A1DAE /* ReverseManager.swift in Sources */,
+				E75ACBD828329302008A1DAE /* DefaultCaseManager.swift in Sources */,
 				E7DE274D27E5093400F4BE6E /* SceneDelegate.swift in Sources */,
+				E7BBADB728537A2B00A0D917 /* CustomCaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

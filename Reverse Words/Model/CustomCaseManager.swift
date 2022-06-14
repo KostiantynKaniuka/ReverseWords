@@ -38,14 +38,18 @@ final class CustomCaseManager {
             }
         }
         newTextArray = newTextArray.map() { String($0.reversed()) }
-        for i in 0..<newTextArray.count {
+        for i in 0..<fullTextArray.count {
+            var orderedArray = [(Int, String)] ()
             for toRestore in posOfChars[i] {
-                let str = toRestore.key
-                let firstChar = str[0]
-                for pos in toRestore.value {
-                    let posIndex = newTextArray[i].index(newTextArray[i].startIndex, offsetBy: pos)
-                    newTextArray[i].insert(firstChar, at: posIndex)
+                for item in toRestore.value {
+                    orderedArray.append((item, toRestore.key))
                 }
+                orderedArray = orderedArray.sorted() { $0.0 < $1.0 }
+            }
+            for (index, str) in orderedArray {
+                let posIndex = newTextArray[i].index(newTextArray[i].startIndex, offsetBy: index)
+                let char = str[0]
+                newTextArray[i].insert(char, at: posIndex)
             }
         }
         return newTextArray.joined(separator: " ")

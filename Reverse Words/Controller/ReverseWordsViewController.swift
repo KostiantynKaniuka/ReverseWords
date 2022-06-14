@@ -21,11 +21,14 @@ final class ReverseWordsViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         reverseTextField.delegate = self
         reverseTextField.endEditing(true)
+        ignoreTextField.endEditing(true)
+        ignoreTextField.delegate = self
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         resultButton.setTitle("Result", for: .normal)
         reverseTextField.endEditing(true)
+        ignoreTextField.endEditing(true)
         return true
     }// changing reverseButton label after user tapped return button on keyboard
     

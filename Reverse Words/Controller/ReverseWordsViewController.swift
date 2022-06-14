@@ -41,7 +41,7 @@ final class ReverseWordsViewController: UIViewController, UITextFieldDelegate {
         let filterElement = CustomCaseManager()
         let reverseManager = DefaultCaseManager()
         if switchControl.selectedSegmentIndex == 1 {
-            let stringToFilter = filterElement.reverseWithoutFilter(FullText: reverseTextField.text ?? "", TextToIgnore: ignoreTextField.text ?? "")
+            let stringToFilter = filterElement.reverseWithoutFilter(fullText: reverseTextField.text ?? "", textToIgnore: ignoreTextField.text ?? "")
             if resultLabel.text?.count == reverseTextField.text?.count {
                 self.reverseTextField.text = nil
                 self.resultLabel.text = nil

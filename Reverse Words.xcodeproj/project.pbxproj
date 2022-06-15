@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E741BC6E281B178E008C2489 /* Reverse_Words_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741BC6D281B178E008C2489 /* Reverse_Words_Tests.swift */; };
+		E741BC6E281B178E008C2489 /* DefaultCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741BC6D281B178E008C2489 /* DefaultCaseTests.swift */; };
 		E75ACBD828329302008A1DAE /* DefaultCaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75ACBD728329302008A1DAE /* DefaultCaseManager.swift */; };
 		E76635A428296D690072D554 /* Reverse_WordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76635A328296D690072D554 /* Reverse_WordsUITests.swift */; };
-		E7BBADB728537A2B00A0D917 /* CustomCaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BBADB628537A2B00A0D917 /* CustomCaseManager.swift */; };
+		E7BBADB728537A2B00A0D917 /* ExceptionRuleReverseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BBADB628537A2B00A0D917 /* ExceptionRuleReverseManager.swift */; };
 		E7DE274B27E5093400F4BE6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DE274A27E5093400F4BE6E /* AppDelegate.swift */; };
 		E7DE274D27E5093400F4BE6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DE274C27E5093400F4BE6E /* SceneDelegate.swift */; };
 		E7DE274F27E5093400F4BE6E /* ReverseWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DE274E27E5093400F4BE6E /* ReverseWordsViewController.swift */; };
 		E7DE275227E5093400F4BE6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DE275027E5093400F4BE6E /* Main.storyboard */; };
 		E7DE275427E5093600F4BE6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7DE275327E5093600F4BE6E /* Assets.xcassets */; };
 		E7DE275727E5093600F4BE6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DE275527E5093600F4BE6E /* LaunchScreen.storyboard */; };
+		E7F0808F2859E91300C3C8AE /* ExceptionCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F0808E2859E91300C3C8AE /* ExceptionCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,11 +39,11 @@
 
 /* Begin PBXFileReference section */
 		E741BC6B281B178E008C2489 /* Reverse Words Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reverse Words Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E741BC6D281B178E008C2489 /* Reverse_Words_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reverse_Words_Tests.swift; sourceTree = "<group>"; };
+		E741BC6D281B178E008C2489 /* DefaultCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCaseTests.swift; sourceTree = "<group>"; };
 		E75ACBD728329302008A1DAE /* DefaultCaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCaseManager.swift; sourceTree = "<group>"; };
 		E76635A128296D690072D554 /* Reverse WordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reverse WordsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76635A328296D690072D554 /* Reverse_WordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reverse_WordsUITests.swift; sourceTree = "<group>"; };
-		E7BBADB628537A2B00A0D917 /* CustomCaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCaseManager.swift; sourceTree = "<group>"; };
+		E7BBADB628537A2B00A0D917 /* ExceptionRuleReverseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionRuleReverseManager.swift; sourceTree = "<group>"; };
 		E7DE274727E5093400F4BE6E /* Reverse Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reverse Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DE274A27E5093400F4BE6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7DE274C27E5093400F4BE6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		E7DE275327E5093600F4BE6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7DE275627E5093600F4BE6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7DE275827E5093600F4BE6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7F0808E2859E91300C3C8AE /* ExceptionCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,8 @@
 		E741BC6C281B178E008C2489 /* Reverse Words Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E741BC6D281B178E008C2489 /* Reverse_Words_Tests.swift */,
+				E741BC6D281B178E008C2489 /* DefaultCaseTests.swift */,
+				E7F0808E2859E91300C3C8AE /* ExceptionCaseTests.swift */,
 			);
 			path = "Reverse Words Unit Tests";
 			sourceTree = "<group>";
@@ -108,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				E75ACBD728329302008A1DAE /* DefaultCaseManager.swift */,
-				E7BBADB628537A2B00A0D917 /* CustomCaseManager.swift */,
+				E7BBADB628537A2B00A0D917 /* ExceptionRuleReverseManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,7 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E741BC6E281B178E008C2489 /* Reverse_Words_Tests.swift in Sources */,
+				E741BC6E281B178E008C2489 /* DefaultCaseTests.swift in Sources */,
+				E7F0808F2859E91300C3C8AE /* ExceptionCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +309,7 @@
 				E7DE274B27E5093400F4BE6E /* AppDelegate.swift in Sources */,
 				E75ACBD828329302008A1DAE /* DefaultCaseManager.swift in Sources */,
 				E7DE274D27E5093400F4BE6E /* SceneDelegate.swift in Sources */,
-				E7BBADB728537A2B00A0D917 /* CustomCaseManager.swift in Sources */,
+				E7BBADB728537A2B00A0D917 /* ExceptionRuleReverseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

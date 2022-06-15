@@ -28,7 +28,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Result"/>
                                         <connections>
-                                            <action selector="resultButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVA-fr-0yx"/>
+                                            <action selector="resultButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="HMj-ag-6BX"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to reverse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jzz-N5-CC0" propertyAccessControl="all">
@@ -149,7 +149,7 @@
                     <connections>
                         <outlet property="defaultView" destination="Xq1-jG-Upk" id="Le9-td-Fu7"/>
                         <outlet property="ignoreTextField" destination="0KL-gJ-hW9" id="qbu-0K-U8T"/>
-                        <outlet property="midleView" destination="dcn-1o-eIx" id="ltf-cu-sY0"/>
+                        <outlet property="middleView" destination="dcn-1o-eIx" id="ltf-cu-sY0"/>
                         <outlet property="resultButton" destination="JGG-Wl-cqA" id="xp8-VY-Ufh"/>
                         <outlet property="resultLabel" destination="dvJ-kg-pWH" id="IOI-sy-ieJ"/>
                         <outlet property="reverseTextField" destination="Jzz-N5-CC0" id="y4d-PR-GoE"/>

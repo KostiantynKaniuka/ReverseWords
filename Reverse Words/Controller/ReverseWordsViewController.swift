@@ -10,7 +10,7 @@ import UIKit
 final class ReverseWordsViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var ignoreTextField: UITextField!
-    @IBOutlet var midleView: UIView!
+    @IBOutlet var middleView: UIView!
     @IBOutlet var switchControl: UISegmentedControl!
     @IBOutlet var resultButton: UIButton!
     @IBOutlet var reverseTextField: UITextField!
@@ -20,8 +20,6 @@ final class ReverseWordsViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         reverseTextField.delegate = self
-        reverseTextField.endEditing(true)
-        ignoreTextField.endEditing(true)
         ignoreTextField.delegate = self
     }
     
@@ -30,7 +28,7 @@ final class ReverseWordsViewController: UIViewController, UITextFieldDelegate {
         reverseTextField.endEditing(true)
         ignoreTextField.endEditing(true)
         return true
-    }// changing reverseButton label after user tapped return button on keyboard
+    }
     
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
@@ -40,11 +38,22 @@ final class ReverseWordsViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    @IBAction func resultButtonTapped(_ sender: UIButton) {
-        let filterElement = CustomCaseManager()
+    @IBAction func resultButtonTapped() {
+        let filterElement = ExceptionRuleReverseManager()
         let reverseManager = DefaultCaseManager()
-        if switchControl.selectedSegmentIndex == 1 {
-            let stringToFilter = filterElement.reverseWithoutFilter(fullText: reverseTextField.text ?? "", textToIgnore: ignoreTextField.text ?? "")
+        switch switchControl.selectedSegmentIndex {
+        case 0:
+            if resultLabel.text?.count == reverseTextField.text?.count {
+                self.reverseTextField.text = nil
+                self.resultLabel.text = nil
+                resultButton.setTitle("Result", for: .normal)
+            } else if resultLabel.text?.count != reverseTextField.text?.count {
+                resultLabel.text = reverseManager.reververseText(Fulltext:
+                reverseTextField.text ?? "")
+                resultButton.setTitle("Clear", for: .normal)
+            }
+        case 1:
+            let stringToFilter = filterElement.reverse(stringWithIgnoreSymbols: reverseTextField.text ?? "", ignoreSymbols: ignoreTextField.text ?? "")
             if resultLabel.text?.count == reverseTextField.text?.count {
                 self.reverseTextField.text = nil
                 self.resultLabel.text = nil
@@ -54,24 +63,21 @@ final class ReverseWordsViewController: UIViewController, UITextFieldDelegate {
                 resultLabel.text = stringToFilter
                 resultButton.setTitle("Clear", for: .normal)
             }
-        } else if switchControl.selectedSegmentIndex == 0 {
-            if resultLabel.text?.count == reverseTextField.text?.count {
-                self.reverseTextField.text = nil
-                self.resultLabel.text = nil
-                resultButton.setTitle("Result", for: .normal)
-            } else if resultLabel.text?.count != reverseTextField.text?.count {
-                resultLabel.text = reverseManager.reververseText(Fulltext: reverseTextField.text ?? "")
-                resultButton.setTitle("Clear", for: .normal)
-            }
+        default:
+            break
         }
     }
     
     @IBAction func switchCase(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            midleView.bringSubviewToFront(defaultView)
+            middleView.bringSubviewToFront(defaultView)
+            resultButton.setTitle("Result", for: .normal)
+            self.resultLabel.text = nil
         case 1:
-            midleView.bringSubviewToFront(ignoreTextField)
+            middleView.bringSubviewToFront(ignoreTextField)
+            resultButton.setTitle("Result", for: .normal)
+            self.resultLabel.text = nil
         default:
             break
         }

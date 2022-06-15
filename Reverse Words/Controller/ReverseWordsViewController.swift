@@ -48,7 +48,7 @@ final class ReverseWordsViewController: UIViewController, UITextFieldDelegate {
                 self.resultLabel.text = nil
                 resultButton.setTitle("Result", for: .normal)
             } else if resultLabel.text?.count != reverseTextField.text?.count {
-                resultLabel.text = reverseManager.reververseText(Fulltext:
+                resultLabel.text = reverseManager.reversed(string:
                 reverseTextField.text ?? "")
                 resultButton.setTitle("Clear", for: .normal)
             }

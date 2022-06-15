@@ -21,7 +21,7 @@ class DefaultCaseTests: XCTestCase {
         let input = "Foxminded cool 24/7"
         let expectedOutput = "dednimxoF looc 24/7"
         //When
-        let reverseAction = sutDefault.reververseText(Fulltext: input)
+        let reverseAction = sutDefault.reversed(string: input)
         //Then
         XCTAssertEqual(expectedOutput, reverseAction)
     }
@@ -32,7 +32,7 @@ class DefaultCaseTests: XCTestCase {
         let input = "abcd efgh"
         let expectedOutput = "dcba hgfe"
         //When
-        let reverseAction = sutDefault.reververseText(Fulltext: input)
+        let reverseAction = sutDefault.reversed(string: input)
         //Then
         XCTAssertEqual(expectedOutput, reverseAction)
     }
@@ -43,7 +43,7 @@ class DefaultCaseTests: XCTestCase {
         let input = "a1bcd efg!h"
         let expectedOutput = "d1cba hgf!e"
         //When
-        let reverseAction = sutDefault.reververseText(Fulltext: input)
+        let reverseAction = sutDefault.reversed(string: input)
         //Then
         XCTAssertEqual(expectedOutput, reverseAction)
     }
@@ -54,7 +54,7 @@ class DefaultCaseTests: XCTestCase {
         let input = "a1b2c3 d4e5f6"
         let expectedOutput = "c1b2a3 f4e5d6"
         //When
-        let reverseAction = sutDefault.reververseText(Fulltext: input)
+        let reverseAction = sutDefault.reversed(string: input)
         //Then
         XCTAssertEqual(expectedOutput, reverseAction)
     }

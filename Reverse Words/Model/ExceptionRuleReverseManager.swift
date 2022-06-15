@@ -10,9 +10,9 @@ import UIKit
 final class ExceptionRuleReverseManager {
     
     func reverse(stringWithIgnoreSymbols: String, ignoreSymbols: String) -> String {
-        let fullTextArray = stringWithIgnoreSymbols.components(separatedBy: " ")
+        let words = stringWithIgnoreSymbols.components(separatedBy: " ")
         var wordsPositions: [[String:[Int]]] = []
-        for (index, word) in fullTextArray.enumerated() {
+        for (index, word) in words.enumerated() {
             wordsPositions.append([:])
             for ignoredCharacter in ignoreSymbols {
                 for (pos, charInComp) in word.enumerated() {
@@ -26,14 +26,14 @@ final class ExceptionRuleReverseManager {
                 }
             }
         }
-        var newTextArray = fullTextArray
-        for (i, _) in fullTextArray.enumerated() {
+        var newTextArray = words
+        for (i, _) in words.enumerated() {
             for ignoredCharacter in ignoreSymbols {
                 newTextArray[i] = newTextArray[i].replacingOccurrences(of: String(ignoredCharacter), with: "")
             }
         }
         newTextArray = newTextArray.map() { String($0.reversed()) }
-        for i in 0..<fullTextArray.count {
+        for i in 0..<words.count {
             var orderedArray = [(Int, String)] ()
             for toRestore in wordsPositions[i] {
                 for item in toRestore.value {

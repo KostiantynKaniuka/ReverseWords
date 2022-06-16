@@ -20,10 +20,10 @@ class ExceptionCaseTests: XCTestCase {
         //Given
         sut = ExceptionRuleReverseManager()
         let input = "Foxminded cool 24/7"
-        let exclusionCharacters = "xl"
+        sut.exceptionElements = "xl"
         let expectedOutput = "dexdnimoF oocl 7/42"
         //When
-        let reverseAction = sut.reverse(stringWithIgnoreSymbols: input, ignoreSymbols: exclusionCharacters)
+        let reverseAction = sut.reverse(string: input)
         //Then
         XCTAssertEqual(expectedOutput, reverseAction)
     }
@@ -32,10 +32,10 @@ class ExceptionCaseTests: XCTestCase {
         //Given
         sut = ExceptionRuleReverseManager()
         let input = "abcd efgh"
-        let exclusionCharacters = "xl"
+        sut.exceptionElements = "xl"
         let expectedOutput = "dcba hgfe"
         //When
-        let reverseAction = sut.reverse(stringWithIgnoreSymbols: input, ignoreSymbols: exclusionCharacters)
+        let reverseAction = sut.reverse(string: input)
         //Then
         XCTAssertEqual(expectedOutput, reverseAction)
     }
@@ -44,10 +44,10 @@ class ExceptionCaseTests: XCTestCase {
         //Given
         sut = ExceptionRuleReverseManager()
         let input = "a1bcd efglh"
-        let exclusionCharacters = "xl"
+        sut.exceptionElements = "xl"
         let expectedOutput = "dcb1a hgfle"
         //When
-        let reverseAction = sut.reverse(stringWithIgnoreSymbols: input, ignoreSymbols: exclusionCharacters)
+        let reverseAction = sut.reverse(string: input)
         //Then
         XCTAssertEqual(expectedOutput, reverseAction)
     }
@@ -56,10 +56,10 @@ class ExceptionCaseTests: XCTestCase {
         //Given
         sut = ExceptionRuleReverseManager()
         let input = "a1b2c3 d4e5f6"
-        let exclusionCharacters = "c5"
+        sut.exceptionElements = "c5"
         let expectedOutput = "32b1ca 6fe54d"
         //When
-        let reverseAction = sut.reverse(stringWithIgnoreSymbols: input, ignoreSymbols: exclusionCharacters)
+        let reverseAction = sut.reverse(string: input)
         //Then
         XCTAssertEqual(expectedOutput, reverseAction)
     }

@@ -8,52 +8,47 @@
 import UIKit
 
 final class ExceptionRuleReverseManager {
+    var exceptionElements = String()
     
-    func reverse(stringWithIgnoreSymbols: String, ignoreSymbols: String) -> String {
-        let words = stringWithIgnoreSymbols.components(separatedBy: " ")
-        var wordsPositions: [[String:[Int]]] = []
-        for (index, word) in words.enumerated() {
-            wordsPositions.append([:])
-            for ignoredCharacter in ignoreSymbols {
-                for (pos, charInComp) in word.enumerated() {
-                    if charInComp == ignoredCharacter {
-                        if wordsPositions[index][String(ignoredCharacter)] == nil {
-                            wordsPositions[index][String(ignoredCharacter)] = [pos]
-                        } else {
-                            wordsPositions[index][String(ignoredCharacter)]!.append(pos)
-                        }
-                    }
+    func reverse(string: String) -> String {
+        let words = string.components(separatedBy: " ")
+        var result = [String]()
+        for word in words {
+            result.append(rearrangeWord(word))
+        }
+        return String(result.joined(separator: " "))
+    }
+    
+    private func rearrangeWord(_ word: String) -> String {
+        var arrayOfCharacters = Array(word)
+        if var firstElementIndex = arrayOfCharacters.indices.first,
+           var secondElementIndex = arrayOfCharacters.indices.last {
+            while firstElementIndex < secondElementIndex {
+                if isException(element: word[firstElementIndex]) {
+                    firstElementIndex += 1
+                } else if isException(element: word[secondElementIndex]) {
+                    secondElementIndex -= 1
+                } else {
+                    arrayOfCharacters.swapAt(firstElementIndex, secondElementIndex)
+                    firstElementIndex += 1
+                    secondElementIndex -= 1
                 }
             }
         }
-        var newTextArray = words
-        for (i, _) in words.enumerated() {
-            for ignoredCharacter in ignoreSymbols {
-                newTextArray[i] = newTextArray[i].replacingOccurrences(of: String(ignoredCharacter), with: "")
-            }
-        }
-        newTextArray = newTextArray.map() { String($0.reversed()) }
-        for i in 0..<words.count {
-            var orderedArray = [(Int, String)] ()
-            for toRestore in wordsPositions[i] {
-                for item in toRestore.value {
-                    orderedArray.append((item, toRestore.key))
-                }
-                orderedArray = orderedArray.sorted() { $0.0 < $1.0 }
-            }
-            for (index, str) in orderedArray {
-                let posIndex = newTextArray[i].index(newTextArray[i].startIndex, offsetBy: index)
-                let char = str[0]
-                newTextArray[i].insert(char, at: posIndex)
-            }
-        }
-        return newTextArray.joined(separator: " ")
+        return String(arrayOfCharacters)
+    }
+    
+    private func isException(element: String.Element) -> Bool {
+        return exceptionElements.contains(element)
     }
 }
 
-private extension StringProtocol {
-    subscript(offset: Int) -> Character {
-        self[index(startIndex, offsetBy: offset)]
+extension String {
+    subscript (index: Int) -> String.Element {
+        let stringIndex = self.index(self.startIndex, offsetBy: index)
+        return self[stringIndex]
     }
 }
+
+
 

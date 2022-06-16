@@ -53,14 +53,14 @@ final class ReverseWordsViewController: UIViewController, UITextFieldDelegate {
                 resultButton.setTitle("Clear", for: .normal)
             }
         case 1:
-            let stringToFilter = filterElement.reverse(stringWithIgnoreSymbols: reverseTextField.text ?? "", ignoreSymbols: ignoreTextField.text ?? "")
+            filterElement.exceptionElements = ignoreTextField.text ?? ""
             if resultLabel.text?.count == reverseTextField.text?.count {
                 self.reverseTextField.text = nil
                 self.resultLabel.text = nil
                 self.ignoreTextField.text = nil
                 resultButton.setTitle("Result", for: .normal)
             } else if resultLabel.text?.count != reverseTextField.text?.count {
-                resultLabel.text = stringToFilter
+                resultLabel.text = filterElement.reverse(string: reverseTextField.text ?? "")
                 resultButton.setTitle("Clear", for: .normal)
             }
         default:

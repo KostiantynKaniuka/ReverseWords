@@ -43,7 +43,7 @@ final class ExceptionRuleReverseManager {
     }
 }
 
-extension String {
+private extension String {
     subscript (index: Int) -> String.Element {
         let stringIndex = self.index(self.startIndex, offsetBy: index)
         return self[stringIndex]

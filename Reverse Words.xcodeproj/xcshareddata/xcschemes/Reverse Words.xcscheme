@@ -38,6 +38,11 @@
                BlueprintName = "Reverse Words Tests"
                ReferencedContainer = "container:Reverse Words.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "ExceptionCaseTests/testPerformanceExample()">
+               </Test>
+            </SkippedTests>
          </TestableReference>
          <TestableReference
             skipped = "NO">
